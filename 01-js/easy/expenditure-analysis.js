@@ -16,17 +16,13 @@
 function calculateTotalSpentByCategory(transactions) {
   const categoryMap = new Map();
 
-  // Iterate through each transaction
   transactions.forEach(transaction => {
     const { category, price } = transaction;
 
-    // Check if the category already exists in the map
     if (categoryMap.has(category)) {
-      // If the category exists, update the total spent
       const totalSpent = categoryMap.get(category) + price;
       categoryMap.set(category, totalSpent);
     } else {
-      // If the category doesn't exist, add it to the map
       categoryMap.set(category, price);
     }
   });

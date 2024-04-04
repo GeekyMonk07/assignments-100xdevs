@@ -9,15 +9,15 @@ There is no automated test for this one, this is more for you to understand time
 */
 
 function calculateSumTime(n) {
-    const startTime = new Date().getTime(); // Get current time in milliseconds
+    const startTime = new Date().getTime();
 
     let sum = 0;
     for (let i = 1; i <= n; i++) {
         sum += i;
     }
 
-    const endTime = new Date().getTime(); // Get current time in milliseconds
-    const elapsedTime = (endTime - startTime) / 1000; // Convert milliseconds to seconds
+    const endTime = new Date().getTime(); 
+    const elapsedTime = (endTime - startTime) / 1000; 
     return elapsedTime;
 }
 

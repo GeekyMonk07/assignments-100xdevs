@@ -49,10 +49,8 @@ class Calculator {
   }
 
   calculate(expression) {
-    // Remove all whitespace from the expression
     const cleanedExpression = expression.replace(/\s+/g, '');
-
-    // Check if the expression contains any invalid characters
+    
     if (!/^[\d()+\-*/.]+$/.test(cleanedExpression)) {
       throw new Error("Invalid expression.");
     }
