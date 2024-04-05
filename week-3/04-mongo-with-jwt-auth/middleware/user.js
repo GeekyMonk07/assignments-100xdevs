@@ -11,7 +11,7 @@ function userMiddleware(req, res, next) {
 
     if (decodedValue.username) {
         req.username = decodedValue.username;
-        req.randomData = "Adsadsadsadssd";
+        req.randomData = "randomtextdata";
         next();
     } else {
         res.status(403).json({
